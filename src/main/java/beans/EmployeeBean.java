@@ -18,33 +18,33 @@ public class EmployeeBean {
 	public String save() {
 		
 		EmployeeDao.save(employee);
-		Employee employee = new Employee();
+		employee = new Employee();
 		
 		return null;
 	}
-	
-	
+
+
 	public Employee getEmployee() {
 		return employee;
 	}
-	
-	
+
+
 	public void setEmployee(Employee employee) {
 		this.employee = employee;
 	}
-	
-	
+
+
 	public List<Employee> getList() {
 		if (list == null) {
 			list = EmployeeDao.findAll();
 		}
-		
 		return list;
 	}
-	
+
+
 	public void setList(List<Employee> list) {
 		this.list = list;
-	}
+	}	
 }
 
 

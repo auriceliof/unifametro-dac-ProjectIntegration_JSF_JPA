@@ -30,7 +30,7 @@ public class Employee {
 	@Column(length = 100)
 	private String place;
 	
-	@Column(name = "nota_avaliacao")
+	@Column(name = "avaluation_note")
 	private Integer avaluationNote;
 	
 	private String function;
