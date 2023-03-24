@@ -6,6 +6,7 @@ import javax.faces.bean.ManagedBean;
 
 import daos.EmployeeDao;
 import entities.Employee;
+import utils.MessageUtil;
 
 @ManagedBean
 public class EmployeeBean {
@@ -17,8 +18,15 @@ public class EmployeeBean {
 	
 	public String save() {
 		
-		EmployeeDao.save(employee);
-		employee = new Employee();
+		try {
+			
+			EmployeeDao.save(employee);
+			MessageUtil.sucesso("Sucesso", "Funcionário salvao com sucesso!");
+			employee = new Employee();
+			
+		} catch(Exception e) {
+			MessageUtil.erro("Erro", "Erro ao salvar o funcionário!");
+		}
 		
 		return null;
 	}

@@ -11,7 +11,9 @@
 	
 	<h:body>
 		<h:form id="form">
-			
+			<p:messages id="messages" showDetail="true" closable="true">
+				<p:autoUpdate />
+			</p:messages>
 			<p:panel header="Registration Page">
 				<p:panelGrid columns="2">
 					<p:outputLabel value="Nome: "/>
@@ -19,7 +21,6 @@
 					
 					<p:outputLabel value="Data admisssão: "/>
 					<p:datePicker value="#{employeeBean.employee.admissionDate}"/>
-					
 					
 					<p:outputLabel value="Contrato: "/>
 					<p:selectOneRadio value="#{employeeBean.employee.typeContract}">

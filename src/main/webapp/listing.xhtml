@@ -13,7 +13,6 @@
 		<h:form id="form">
 			 
 			<p:panel header="Página de listagem">
-				<p:link outcome="index" value="voltar"/>
 				<p:dataTable value="#{employeeBean.list}" var="f">
 					<p:column headerText="Nome"><p:outputLabel value="#{f.name}"/></p:column>
 					<p:column headerText="Admissão"><p:outputLabel value="#{f.admissionDate}"/></p:column>
@@ -23,6 +22,7 @@
 					<p:column headerText="Avaliação"><p:outputLabel value="#{f.avaluationNote}"/></p:column>
 					<p:column headerText="Atividades"><p:outputLabel value="#{f.function}"/></p:column>
 				</p:dataTable>
+				<p:link outcome="index" value="voltar"/>
 			</p:panel>
 		</h:form>
 	</h:body>
